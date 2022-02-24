@@ -1,36 +1,20 @@
-import './App.css';
-import React, { useState } from 'react';
+import "./App.css";
+import React from "react";
+import Counter from "./Components/Counter";
+import ThemePicker from "./Components/ThemePicker";
 
 const App = () => {
-  let color = 'white';
+  let theme = "App-Dark";
+  let count = 0;
 
-	const divStyle = {
-    backgroundColor: color,
-    height: '100vh',
-    width: '100vw',
-    margin: '50vh 45vw',
-  };
-
-	return (
-    <div style={divStyle}>
-      <div style={{margin: '5px 0'}}>
-        <button>
-                White
-        </button>
-      </div>
-      <div style={{margin: '5px 0'}}>
-        <button>
-                BlueViolet
-        </button>
-      </div>
-      <div  style={{margin: '5px 0'}}>
-        <button>
-                Black
-        </button>
+  return (
+    <div className={theme}>
+      <div className="App-header">
+        <Counter count={count} />
+        <ThemePicker theme={theme} />
       </div>
     </div>
   );
 };
-
 
 export default App;
